@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+	"http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+
+   <constant name="struts.enable.DynamicMethodInvocation" value="true" />
+    <constant name="struts.devMode" value="false" />
+	<package name="JMN" extends="json-default" strict-method-invocation="false">
+	
+		
+		
+		<action name="addGuitar" class="cn.Guitars.action.GuitarAction" method="addGuitar" >
+			<result name="success" type="redirect">addguitar</result>
+		</action>
+		<action name="searchGuitar" class="cn.Guitars.action.GuitarAction" method="searchGuitar" >
+			<result name="success" type="redirect">listguitar</result>
+		</action>
+		<action name="*">
+			<result>WEB-INF/content/{1}.jsp</result>
+		</action>	
+		</package>
+	
+	<package name="jmn" extends="struts-default" strict-method-invocation="false">
+				<!-- 验证用户昵称是否唯一 --> 
+		
+	<!-- 	<action name="*">
+			<result>{1}.jsp</result>
+		</action>	 -->
+	</package>
+		
+				
+	
+	
+</struts>
+
