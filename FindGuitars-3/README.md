@@ -1,4 +1,5 @@
-# Guitar3
+# Guitar3 
+##SSH框架，用applicationcontext-public.xml配置mysql、sqlite数据库；用hibernate注解分别调用两种sessionfactory,实现数据库之间的切换
 ## testAdd
 ![](testAdd.png)
 ## testDelete
