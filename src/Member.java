@@ -53,7 +53,7 @@ public class Member {
 	public  Boolean CanLoan(Book book){
 		ISpecification<Member> hasReachMax=new HasReachMaxSpecification();
 		ISpecification<Member> loanOnlyOne=new LoanOnlyOneSpecification(book);
-		return hasReachMax.IsSatisfiedBy(this) && loanOnlyOne.IsSatisfiedBy(this);
+		return hasReachMax.IsSatisfiedBy(this) && loanOnlyOne.IsSatisfiedBy(this) && book.getLoanTo()==null;
 	}
 	
 	/**
